@@ -1,7 +1,6 @@
 package tictactoe.model;
 
 public class Cell {
-
     private final Position position;
     private Mark mark;
 

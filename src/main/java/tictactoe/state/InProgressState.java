@@ -1,8 +1,13 @@
 package tictactoe.state;
 
-import tictactoe.engine.GameEngine;
-
 public class InProgressState implements GameState {
-    public void handle(GameEngine engine) {
+    @Override
+    public boolean isTerminal() {
+        return false;
+    }
+
+    @Override
+    public String getStatusMessage() {
+        return "Game in progress";
     }
 }

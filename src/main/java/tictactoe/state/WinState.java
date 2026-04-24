@@ -1,9 +1,25 @@
 package tictactoe.state;
 
-import tictactoe.engine.GameEngine;
+import tictactoe.model.Mark;
 
 public class WinState implements GameState {
-    public void handle(GameEngine engine) {
-        System.out.println("Game won!");
+    private final Mark winner;
+
+    public WinState(Mark winner) {
+        this.winner = winner;
+    }
+
+    public Mark getWinner() {
+        return winner;
+    }
+
+    @Override
+    public boolean isTerminal() {
+        return true;
+    }
+
+    @Override
+    public String getStatusMessage() {
+        return "Winner: " + winner;
     }
 }

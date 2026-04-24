@@ -1,5 +1,7 @@
 package tictactoe.observer;
 
+import tictactoe.engine.GameEngine;
+
 public interface GameObserver {
-    void update(String message);
+    void onGameUpdated(GameEngine engine, String message);
 }
